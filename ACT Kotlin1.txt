@@ -1,0 +1,42 @@
+//con ayuda de internet (no sé programar en kotlin)
+
+fun main(Args: Array<String>) {
+    var (igual, aux) = Pair(0, 0)
+    var texto: String
+   
+    texto = "Jwejfjwfnw"
+    for (ind in texto.length - 1 downTo 0) {
+        when { texto[ind] == texto[aux] -> igual++ }
+        aux++
+    }
+    when (igual) {
+        texto.length -> println("$texto es palindromo!!")
+        else -> println("$texto no es palindromo!!")
+    }
+      var palabra: String;
+    var numeroPrimo: Int = 898
+    var Contador = 0
+    var Limite = 0
+    
+    
+    
+    print("Es divisible por: ")
+        (1..numeroPrimo!!).forEach { div ->
+        if(numeroPrimo % div == 0) {
+            print("$div - ")
+            Contador++
+            Limite++
+            if(Limite == 10) {
+                print("\n\t\t\t")
+                Limite = 0
+            }
+        }
+        
+       }
+            when(Contador) {
+                2 -> println("Es primo, tiene $Contador divisores")
+                else -> println("No es primo, tiene $Contador divisores")
+                
+            }
+        
+}
